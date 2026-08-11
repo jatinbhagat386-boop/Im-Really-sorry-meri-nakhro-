@@ -3,186 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I Am So So Sorry My Kuchu Puchu 🌸🎀</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <title>Im Sorry Jass Meri Nakhro 🌸❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { 
-            background: linear-gradient(135deg, #ffdde1 0%, #ee9ca7 100%); 
-            font-family: 'Nunito', sans-serif; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh; 
-            padding: 20px; 
-            overflow-x: hidden; 
-        }
-        .card { 
-            background: #ffffff; 
-            border-radius: 30px; 
-            padding: 25px; 
-            max-width: 440px; 
-            width: 100%; 
-            text-align: center; 
-            box-shadow: 0 20px 40px rgba(238, 156, 167, 0.4); 
-            border: 4px solid #fff0f3; 
-            position: relative; 
-        }
-        .badge { 
-            background: #ff4d6d; 
-            color: #fff; 
-            font-weight: 800; 
-            font-size: 13px; 
-            padding: 6px 16px; 
-            border-radius: 20px; 
-            display: inline-block; 
-            margin-bottom: 15px; 
-            letter-spacing: 0.5px; 
-            text-transform: uppercase; 
-        }
-        .main-gif { 
-            width: 160px; 
-            height: 160px; 
-            object-fit: contain; 
-            margin: 0 auto 10px auto; 
-            display: block; 
-        }
-        h1 { 
-            font-family: 'Fredoka One', cursive; 
-            color: #ff4d6d; 
-            font-size: 24px; 
-            margin-bottom: 12px; 
-            line-height: 1.2; 
-        }
-        
-        /* Video Container Styling */
-        .video-box {
-            width: 100%;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(255, 77, 109, 0.25);
-            border: 3px solid #ffb6c1;
-            margin-bottom: 18px;
-            background: #000;
-        }
-        .video-box video {
-            width: 100%;
-            max-height: 250px;
-            display: block;
-            object-fit: contain;
+        body {
+            background: #0f0c20;
+            color: #fff;
+            font-family: 'Nunito', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
         }
 
-        /* Cute Shayari Box */
-        .shayari-box {
-            background: #fff0f3;
-            border-radius: 20px;
-            padding: 16px;
-            color: #4a4a4a;
-            font-size: 15px;
-            line-height: 1.6;
-            margin-bottom: 20px;
+        .container {
+            width: 100%;
+            max-width: 420px;
+            padding: 20px;
             text-align: center;
-            border: 2px dashed #ff4d6d;
             position: relative;
         }
-        .shayari-text {
-            font-style: italic;
-            font-weight: 700;
-            color: #ff2a55;
-            margin-bottom: 8px;
+
+        .screen {
+            display: none;
+            animation: fadeIn 0.8s ease forwards;
+        }
+        .screen.active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        .highlight { color: #ff4d6d; font-weight: 800; }
+        .envelope-card {
+            background: linear-gradient(145deg, #1f1b3a, #141128);
+            border-radius: 25px;
+            padding: 30px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+        .title-sub {
+            font-family: 'Dancing Script', cursive;
+            font-size: 28px;
+            color: #ffb6c1;
+            margin-bottom: 25px;
+        }
+        .envelope-img {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+        .btn-main {
+            background: linear-gradient(45deg, #ff4d6d, #ff758f);
+            color: #fff;
+            border: none;
+            padding: 14px 32px;
+            font-size: 16px;
+            font-weight: 800;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(255, 77, 109, 0.4);
+            transition: 0.3s;
+        }
+        .btn-main:hover { transform: scale(1.05); }
 
-        .btn-container { 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            gap: 15px; 
-            position: relative; 
-            min-height: 60px; 
+        .photo-frame {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid #ff4d6d;
+            margin: 0 auto 20px auto;
+            overflow: hidden;
+            box-shadow: 0 0 25px rgba(255, 77, 109, 0.5);
         }
-        .btn { 
-            font-family: 'Fredoka One', cursive; 
-            font-size: 18px; 
-            padding: 12px 28px; 
-            border: none; 
-            border-radius: 50px; 
-            cursor: pointer; 
-            transition: all 0.2s ease; 
-            outline: none; 
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
-        .btn-yes { 
-            background-color: #ff4d6d; 
-            color: white; 
-            box-shadow: 0 8px 20px rgba(255, 77, 109, 0.4); 
+        .quote-box {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 25px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #ffe6eb;
         }
-        .btn-yes:hover { transform: scale(1.08); background-color: #ff2a55; }
-        .btn-no { background-color: #e0e0e0; color: #666; position: absolute; right: 20px; }
 
-        .success-screen { 
-            display: none; 
-            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; 
+        .flower-field {
+            font-size: 45px;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            cursor: pointer;
         }
-        @keyframes popIn { 0% { opacity: 0; transform: scale(0.8); } 100% { opacity: 1; transform: scale(1); } }
-        .success-screen h2 { font-family: 'Fredoka One', cursive; color: #ff4d6d; font-size: 26px; margin-top: 15px; margin-bottom: 10px; }
-        .success-screen p { color: #555; font-size: 15px; font-weight: 700; line-height: 1.5; }
+        .flower-item {
+            animation: bounce 1.5s infinite alternate;
+        }
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+
+        .final-letter {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(12px);
+            border-radius: 25px;
+            padding: 25px;
+            border: 1px solid rgba(255, 182, 193, 0.3);
+            text-align: left;
+        }
+        .final-letter h2 {
+            font-family: 'Dancing Script', cursive;
+            color: #ff758f;
+            font-size: 30px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .final-letter p {
+            font-size: 15px;
+            color: #e0e0e0;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
     </style>
 </head>
 <body>
 
-    <div class="card" id="mainCard">
-        <div id="contentBox">
-            <span class="badge">Official Apology Treaty 🌸🎀</span>
-            
-            <img class="main-gif" src="https://media.tenor.com/efb3438z37AAAAAi/bear-panda.gif" alt="Cute Panda Holding Heart">
+    <div class="container">
 
-            <h1>I Am So So Sorry My Kuchu Puchu 🥺❤️</h1>
+        <!-- Background Music -->
+        <audio id="bgMusic" loop>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+        </audio>
 
-            <!-- Cute Video Player -->
-            <<div class="video-box">
-    <img src="https://media.tenor.com/gU8yW95Zf4AAAAAi/tkthao211-bubududu.gif" alt="Kuchu Puchu Cute Animation" style="width:100%; border-radius:15px;">
-</div>
-
-            <!-- Shayari & Thought Box -->
-            <div class="shayari-box">
-                <p class="shayari-text">"Gussa tera haq hai, par narazgi ziada mat rakhna...<br>Meri har saans tumse hai, mujhe yun door mat rakhna! 🥺🌸"</p>
-                <hr style="border: none; border-top: 1px dashed #ffb6c1; margin: 10px 0;">
-                <p style="font-size: 14px;">Mere <span class="highlight">Kuchu Puchu</span>, mujhe pata hai maine bewakoofi ki hai. Upar se periods ka pain aur mera faltu kalesh... I am really really sorry! Mere dil aur life mein tumhare alawa koi <b>Darling</b> nahi hai. Promise aage se aisi galti kabhi nahi hogi! ❤️</p>
-            </div>
-
-            <div class="btn-container">
-                <button class="btn btn-yes" onclick="forgiveMe()">Maaf Kiya ❤️</button>
-                <button class="btn btn-no" id="noBtn" onmouseover="dodgeButton()" onclick="dodgeButton()">Nahi Karti 😤</button>
+        <!-- SCREEN 1: ENVELOPE -->
+        <div class="screen active" id="screen1">
+            <div class="envelope-card">
+                <p class="title-sub">Im Sorry Jass Meri Nakhro 🌸❤️</p>
+                <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=600" class="envelope-img" alt="Envelope">
+                <button class="btn-main" onclick="nextScreen(2); playAudio();">Tap to Open 🌹</button>
             </div>
         </div>
 
-        <div class="success-screen" id="successBox">
-            <img class="main-gif" src="https://media.tenor.com/gU8yW95Zf4AAAAAi/tkthao211-bubududu.gif" alt="Cute Hug Cartoon">
-            <h2>YAYYYY! Thank You My Queen! 🎉</h2>
-            <p>I Love You So So Much! 🥰</p>
-            <p style="margin-top: 10px; color: #ff4d6d;">Ab jaldi se ek pyaari si smile de do! Hot chocolate, chocolates aur 1000 hugs on the way hain! 🍫💖🤗</p>
+        <!-- SCREEN 2: PHOTO & APOLOGY QUOTE -->
+        <div class="screen" id="screen2">
+            <div class="photo-frame">
+                <img src="https://media.tenor.com/efb3438z37AAAAAi/bear-panda.gif" alt="Our Memories">
+            </div>
+            <div class="quote-box">
+                <p style="color: #ff758f; font-weight: 800; margin-bottom: 8px;">"I hate fighting with you..." 💔</p>
+                <p>Periods ka pain aur mera gussa... Mujhe aise time par tumhare saath rehna chahiye tha, na ki kalesh karna chahiye tha. I'm really sorry Jass! 🥺</p>
+            </div>
+            <button class="btn-main" onclick="nextScreen(3)">Let Me Make It Up To You 🌸</button>
         </div>
+
+        <!-- SCREEN 3: VIRTUAL BOUQUET -->
+        <div class="screen" id="screen3">
+            <div class="quote-box">
+                <h3 style="color: #ffb6c1; margin-bottom: 10px;">Flowers for Jass Meri Nakhro 💐</h3>
+                <p>Tap on the flowers to make them bloom for you!</p>
+            </div>
+            <div class="flower-field">
+                <span class="flower-item" onclick="bloom(this)">🌸</span>
+                <span class="flower-item" onclick="bloom(this)">🌹</span>
+                <span class="flower-item" onclick="bloom(this)">🌷</span>
+                <span class="flower-item" onclick="bloom(this)">🌻</span>
+            </div>
+            <div id="flowerMsg" style="min-height: 30px; color: #ff758f; font-weight: bold; margin-bottom: 20px;"></div>
+            <button class="btn-main" onclick="nextScreen(4)">Read My Final Message 💌</button>
+        </div>
+
+        <!-- SCREEN 4: FINAL LETTER -->
+        <div class="screen" id="screen4">
+            <div class="final-letter">
+                <h2>Im Sorry Jass Meri Nakhro ❤️</h2>
+                <p>Maine jo bhi bewakoofi ki (wo stupid contact name aur emojis), uske liye main dil se sorry maangta hoon.</p>
+                <p>Mere dil aur meri life mein tumhare alawa koi <b>'Darling'</b> nahi hai aur na hi ho sakti hai. Tum mere liye sabse zaroori ho.</p>
+                <p>Aage se aisa pagalpan kabhi nahi hoga. Ab jaldi se smile kar do aur apna khayal rakho! 🍫🤗</p>
+                <div style="text-align: center; margin-top: 20px;">
+                    <span style="font-size: 24px;">💖✨🌸</span>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <script>
-        function dodgeButton() {
-            const noBtn = document.getElementById('noBtn');
-            const card = document.getElementById('mainCard');
-            const cardRect = card.getBoundingClientRect();
-            const btnRect = noBtn.getBoundingClientRect();
-            const maxX = (cardRect.width / 2) - btnRect.width;
-            const maxY = 80;
-            const randomX = (Math.random() - 0.5) * maxX * 2;
-            const randomY = (Math.random() - 0.5) * maxY * 2;
-            noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+        function nextScreen(screenNum) {
+            document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+            document.getElementById('screen' + screenNum).classList.add('active');
         }
 
-        function forgiveMe() {
-            document.getElementById('contentBox').style.display = 'none';
-            document.getElementById('successBox').style.display = 'block';
+        function playAudio() {
+            var audio = document.getElementById("bgMusic");
+            audio.play().catch(e => console.log("Audio play blocked"));
+        }
+
+        function bloom(element) {
+            element.style.transform = "scale(1.5)";
+            element.style.transition = "0.3s";
+            document.getElementById('flowerMsg').innerText = "You deserve all the happiness in the world, Jass! ❤️";
         }
     </script>
-
 </body>
 </html>
